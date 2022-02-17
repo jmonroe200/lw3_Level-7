@@ -39,8 +39,42 @@
             var provider = ethers.providers.Web3Provider(
                 web3.currentProvider,
                 "ropsten"
-            
-            )
+            );
+            var MoodContractAddress = "<0x1050D5260A92A0DEd28178c0738d1aF3d56FA695>"
+            var MoodContractABI = [
+                {
+                    "constant": true,
+                    "inputs": [],
+                    "name": "getMood",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "payable": false,
+                    "stateMutability": "view",
+                    "type": "function"
+                },
+                {
+                    "constant": false,
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "_mood",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setMood",
+                    "outputs": [],
+                    "payable": false,
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                }
+            ]
+            var MoodContract
+            var signer
         </script>
     </body>
 </html>
